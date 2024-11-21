@@ -1,0 +1,206 @@
+{
+    "01": {
+        "name": "Allgemeinere Interessengebiete",
+        "group": "Fiona, Linnea, Mansura",
+        "title": "Allgemeinere Interessengebiete",
+        "questions": [
+            {
+                "text": "Ich habe viele Ideen und habe Spaß an kreativen Aufgaben.",
+                "value": 1,
+                "id_all": 1,
+                "id_cat": 1
+            },
+            {
+                "text": "Ich arbeite gerne handwerklich.",
+                "value": 1,
+                "id_all": 2,
+                "id_cat": 2
+            },
+            {
+                "text": "Ich arbeite gerne mit Kindern.",
+                "value": 1,
+                "id_all": 3,
+                "id_cat": 3
+            },
+            {
+                "text": "Ich helfe gerne schwächeren Menschen.",
+                "value": 1,
+                "id_all": 4,
+                "id_cat": 4
+            },
+            {
+                "text": "Ich habe Spaß am Umgang mit technischen Geräten und Technik.",
+                "value": 1,
+                "id_all": 5,
+                "id_cat": 5
+            }
+        ]
+    },
+    "02": {
+        "name": "Büro / Menschen / soziales / Indoor / Outdoor",
+        "group": "Nia, Leni",
+        "title": "Arbeitsumgebungen",
+        "questions": [
+            {
+                "text": "Ich arbeite gerne mit anderen Menschen zusammen.",
+                "value": 1,
+                "id_all": 6,
+                "id_cat": 1
+            },
+            {
+                "text": "Ich arbeite gerne im Team.",
+                "value": 1,
+                "id_all": 7,
+                "id_cat": 2
+            },
+            {
+                "text": "Ich arbeite gerne drinnen.",
+                "value": 1,
+                "id_all": 8,
+                "id_cat": 3
+            },
+            {
+                "text": "Ich arbeite gerne draußen.",
+                "value": 1,
+                "id_all": 9,
+                "id_cat": 4
+            },
+            {
+                "text": "Ich habe gerne Abwechslung in meinem Arbeitsplatz.",
+                "value": 1,
+                "id_all": 10,
+                "id_cat": 5
+            }
+        ]
+    },
+    "03": {
+        "name": "Studium / Ausbildung etc.",
+        "group": "Laura, Laura, Maja",
+        "title": "Lern- und Karrieremöglichkeiten",
+        "questions": [
+            {
+                "text": "Ich möchte lieber direkt in die Praxis einsteigen und Erfahrungen im Berufsalltag sammeln.",
+                "value": 1,
+                "id_all": 11,
+                "id_cat": 1
+            },
+            {
+                "text": "Ich kann mir gut vorstellen, noch eine längere Zeit theoretisch zu lernen, bevor ich in die Praxis gehe.",
+                "value": 1,
+                "id_all": 12,
+                "id_cat": 2
+            },
+            {
+                "text": "Ich lerne lieber durch praktische Erfahrungen.",
+                "value": 1,
+                "id_all": 13,
+                "id_cat": 3
+            },
+            {
+                "text": "Ich kann mir vorstellen, mich gleichzeitig praktisch und theoretisch weiterzubilden.",
+                "value": 1,
+                "id_all": 14,
+                "id_cat": 4
+            }
+        ]
+    },
+    "04": {
+        "name": "Vorerfahrung",
+        "group": "Emma, Greta, Jordan",
+        "title": "Erfahrungen",
+        "questions": [
+            {
+                "text": "Ich habe schonmal gearbeitet.",
+                "value": 1,
+                "id_all": 15,
+                "id_cat": 1
+            },
+            {
+                "text": "Ich habe schonmal ein Praktikum absolviert.",
+                "value": 1,
+                "id_all": 16,
+                "id_cat": 2
+            },
+            {
+                "text": "Ich habe schonmal ein FSJ gemacht.",
+                "value": 1,
+                "id_all": 17,
+                "id_cat": 3
+            }
+        ]
+    },
+    "05": {
+        "name": "Arbeitszeiten",
+        "group": "Anna, Katie",
+        "title": "Arbeitszeitpräferenzen",
+        "questions": [
+            {
+                "text": "Ich würde am Wochenende arbeiten.",
+                "value": 1,
+                "id_all": 18,
+                "id_cat": 1
+            },
+            {
+                "text": "Ich würde Nachts arbeiten.",
+                "value": 1,
+                "id_all": 19,
+                "id_cat": 2
+            },
+            {
+                "text": "Ich möchte feste Arbeitstage.",
+                "value": 1,
+                "id_all": 20,
+                "id_cat": 3
+            },
+            {
+                "text": "Ich möchte flexible Arbeitstage.",
+                "value": 1,
+                "id_all": 21,
+                "id_cat": 4
+            },
+            {
+                "text": "Ich möchte Gleitzeit.",
+                "value": 1,
+                "id_all": 22,
+                "id_cat": 5
+            },
+            {
+                "text": "Ich möchte feste Arbeitszeiten.",
+                "value": 1,
+                "id_all": 23,
+                "id_cat": 6
+            }
+        ]
+    },
+    "10": {
+        "name": "Einzelarbeit vs. Team",
+        "group": "Lilly, Lina, Leon",
+        "title": "Arbeitsstil",
+        "questions": [
+            {
+                "text": "Ich arbeite gerne alleine.",
+                "value": 1,
+                "id_all": 24,
+                "id_cat": 1
+            },
+            {
+                "text": "Ich arbeite gerne mit anderen zusammen.",
+                "value": 1,
+                "id_all": 25,
+                "id_cat": 2
+            },
+            {
+                "text": "Ich gebe gerne die Verantwortung ab.",
+                "value": 1,
+                "id_all": 26,
+                "id_cat": 3
+            },
+            {
+                "text": "Ich mag es, die volle Verantwortung zu tragen.",
+                "value": 1,
+                "id_all": 27,
+                "id_cat": 4
+            }
+        ]
+    }
+}
