@@ -167,6 +167,76 @@ function updateBoxStyles(previousIndex, currentIndex, allBoxes) {
 }
 
 function finishTest() {
-    console.log("Test abgeschlossen. Spezifische Aktion wird ausgeführt.");
-    alert("Test erfolgreich abgeschlossen!");
+    console.log("Test abgeschlossen. Antworten werden gesammelt und gespeichert.");
+
+    const answersByCategory = {};
+
+    const allQuestions = document.querySelectorAll(".box");
+
+    allQuestions.forEach((box) => {
+        const questionHeader = box.querySelector("h1").textContent; // Die Frage
+        const valueIdText = box.querySelector(".untertitle_id").textContent; // "V<Value>-ID<All>-ID#<Cat>"
+        const titleText = box.querySelector(".untertitle").textContent; // Kategorie Titel
+        const selectedOption = box.querySelector("input[type='radio']:checked"); // Gewählte Option
+
+        if (selectedOption) {
+            // Extrahiere Details aus der ID
+            const [value, idAll, idCat] = valueIdText
+                .match(/V(\d+)-ID(\d+)-ID#(\d+)/)
+                .slice(1, 4)
+                .map(Number);
+
+            // Wenn die Kategorie noch nicht existiert, initialisiere sie
+            if (!answersByCategory[titleText]) {
+                answersByCategory[titleText] = [];
+            }
+
+            // Füge die Antwort zur richtigen Kategorie hinzu
+            answersByCategory[titleText].push({
+                question: questionHeader,
+                selectedValue: parseInt(selectedOption.value),
+                idAll: idAll,
+                idCat: idCat,
+            });
+        } else {
+            console.warn(`Keine Option für Frage "${questionHeader}" ausgewählt.`);
+        }
+    });
+
+    console.log("Gesammelte Antworten nach Kategorien:", answersByCategory);
+
+    // JSON erstellen und als Datei herunterladen
+    const jsonData = JSON.stringify(answersByCategory, null, 4);
+    const blob = new Blob([jsonData], { type: "application/json" });
+    const downloadLink = document.createElement("a");
+    downloadLink.href = URL.createObjectURL(blob);
+    downloadLink.download = "test_results_by_category.json";
+    downloadLink.style.display = "none";
+    document.body.appendChild(downloadLink);
+    downloadLink.click();
+    document.body.removeChild(downloadLink);
+
+    console.log("JSON-Datei wurde heruntergeladen.");
+    alert("Test erfolgreich abgeschlossen! Die Antworten wurden gespeichert.");
+}
+
+// Dev Tests
+function randomizeAnswers() {
+    console.log("Zufällige Antworten werden für jede Frage ausgewählt.");
+
+    const allQuestions = document.querySelectorAll(".box");
+
+    allQuestions.forEach((box) => {
+        // Wähle eine zufällige Option (zwischen 1 und 4)
+        const randomOption = Math.floor(Math.random() * 4) + 1;
+
+        // Suche das Radio-Button-Element, das der zufälligen Option entspricht
+        const radioOption = box.querySelector(`input[type="radio"][value="${randomOption}"]`);
+
+        // Wenn eine gültige Option gefunden wird, setze sie als ausgewählt
+        if (radioOption) {
+            radioOption.checked = true;
+            console.log(`Für die Frage "${box.querySelector("h1").textContent}" wurde die Option ${randomOption} gewählt.`);
+        }
+    });
 }
